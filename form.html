@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nif4Erasmus - Form</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet" />
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+
+  <!-- Tel Input -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script async src="https://js.stripe.com/v3/buy-button.js">
+  </script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="scripts/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">NIF 4 <br />ERASMUS</a>
+    <!-- Add this right after the logo in your header -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="index.html#services">SERVICES</a></li>
+        <li><a href="partners.html">PARTNERS</a></li>
+        <li><a href="articles.html">ARTICLES</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contacts.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Image Section -->
+  <div id="about-hero">
+    <img src="assets/images/partners-hero.jpeg" alt="About Nif4Erasmus" />
+  </div>
+  <!-- Form Section -->
+  <section id="articles" class="about-container">
+    <h2 class="left-aligned">REQUEST YOUR NIF NOW!</h2>
+    <div class="text-column">
+      <p>
+        Please fill out all required fields marked with an asterisk (*).
+        Ensure all documents are clear and legible.
+      </p>
+    </div>
+
+    <div class="form-container">
+      <form id="personalInfoForm" class="custom-form">
+        <!-- Progress bar -->
+        <div class="form-progress">
+          <div class="progress-step active" data-step="1">
+            <div class="step-number">1</div>
+            <div class="step-name">Service</div>
+          </div>
+          <div class="progress-step" data-step="2">
+            <div class="step-number">2</div>
+            <div class="step-name">Personal Details</div>
+          </div>
+          <div class="progress-step" data-step="3">
+            <div class="step-number">3</div>
+            <div class="step-name">Address</div>
+          </div>
+          <div class="progress-step" data-step="4">
+            <div class="step-number">4</div>
+            <div class="step-name">Contact</div>
+          </div>
+          <div class="progress-step" data-step="5">
+            <div class="step-number">5</div>
+            <div class="step-name">Who told you about us?</div>
+          </div>
+        </div>
+        <!-- Form sections -->
+        <div class="form-sections">
+          <!-- Step 1: Personal Details -->
+          <div class="form-section active" data-step="1">
+            <h3>Service Selection</h3>
+            <!-- ...existing service and referral fields... -->
+            <div class="form-group radio-group">
+              <div class="radio-option">
+                <input type="radio" id="nifOnly" name="service" value="nifOnly" required />
+                <label for="nifOnly">
+                  <div class="radio-group-label">
+                    <p> NIF: 50 €</p>
+                    <p class="radio-group-sub-label">For UE/EEA Citizens</p>
+                  </div>
+                </label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="nifAndTax" name="service" value="nifAndTax" required />
+                <label for="nifAndTax">
+                  <div class="radio-group-label">
+                    <p> NIF and TAX REPRESENTATIVE: 100 €</p>
+                    <p class="radio-group-sub-label">For Non UE/EEA Citizens</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="form-group checkbox-group" id="consent-group" style="margin-top: 1.5rem;">
+              <div class="checkbox-option">
+                <input type="checkbox" id="acceptTerms" name="acceptTerms" required />
+                <label for="acceptTerms">
+                  I have read and accept the
+                  <a href="terms-conditions.html" target="_blank">Terms and Conditions</a>
+                </label>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" id="acceptPrivacy" name="acceptPrivacy" required />
+                <label for="acceptPrivacy">
+                  I have read and accept the
+                  <a href="privacy-policy.html" target="_blank">Privacy and Data Protection Policy</a>
+                </label>
+              </div>
+            </div>
+            <div class="form-navigation">
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+          <!-- Step 2: Personal Details -->
+          <div class="form-section" data-step="2">
+            <h3>Personal Details</h3>
+            <!-- ...existing personal details fields... -->
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="dateOfBirth">Date of Birth *</label>
+              <input type="date" id="dateOfBirth" name="dateOfBirth" required />
+            </div>
+
+            <div class="form-group">
+              <label for="nationality">Nationality *</label>
+              <input type="text" id="nationality" name="nationality" required />
+            </div>
+
+            <div class="form-group">
+              <label for="idCard">Valid Identification Card *</label>
+              <small>For UE Citizen: National ID card or Passport</br>
+                For Non-UE/EEA Citizen: Passport</small>
+              <input type="file" id="idCard" name="idCard" accept=".pdf,.jpg,.jpeg,.png" required />
+              <small class="file-help">Accepted formats: PDF, JPG, PNG (Max 5MB)</small>
+            </div>
+            <div class="form-navigation">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Address Information -->
+          <div class="form-section" data-step="3">
+            <h3>Address Information</h3>
+            <!-- ...existing address fields... -->
+            <div class="form-group">
+              <label for="address">Address *</label>
+              <input type="text" id="address" name="address" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="zipCode">Zip Code *</label>
+                <input type="text" id="zipCode" name="zipCode" required />
+              </div>
+
+              <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="country">Country *</label>
+              <input type="text" id="country" name="country" required />
+            </div>
+
+            <div class="form-group">
+              <label for="proofOfAddress">Proof of Address *</label>
+              <small>Please attach certificate of residence, rental contract, utility bill or bank
+                statement, for example.</small>
+              <small><b>IMPORTANT</b> - Must have been issued within the last 3 (three) months and be in
+                accordance with the information provided on this form.</small>
+              <input type="file" id="proofOfAddress" name="proofOfAddress" accept=".pdf,.jpg,.jpeg,.png" required />
+              <small class="file-help">Accepted formats: PDF, JPG, PNG (Max 5MB)</small>
+            </div>
+            <div class="form-navigation">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Contact Information -->
+          <div class="form-section" data-step="4">
+            <h3>Contact Information</h3>
+            <!-- ...existing contact fields... -->
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp Number *</label>
+              <input type="tel" id="whatsapp" name="whatsapp" required />
+            </div>
+            <div class="form-navigation">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="button" class="next-btn">Next</button>
+            </div>
+          </div>
+          <!-- Step 5: Contact Information -->
+          <div class="form-section" data-step="5">
+            <h3>Who told you about us? </h3>
+            <p class="referral-subtitle">Spill the beans! We're curious, where did you first hear about us?</p>
+            <p class="referral-instruction">Please, pick all that apply:</p>
+
+            <div class="form-group checkbox-group">
+              <div class="checkbox-option">
+                <input type="checkbox" id="instagram" name="referralSource[]" eInstagram" value="Instagram">
+                <label for="instagram">Instagram</label>
+              </div>
+
+              <div class="checkbox-option">
+                <input type="checkbox" id="tiktok" name="referralSource[]" value="TikTok">
+                <label for="tiktok">TikTok</label>
+              </div>
+
+              <div class="checkbox-option">
+                <input type="checkbox" id="google" name="referralSource[]" value="Google Search">
+                <label for="google">Google Search</label>
+              </div>
+
+              <div class="checkbox-option">
+                <input type="checkbox" id="facebook" name="referralSource[]" value="Facebook">
+                <label for="facebook">Facebook</label>
+              </div>
+
+              <div class="checkbox-option">
+                <input type="checkbox" id="friend" name="referralSource[]" value="Friend">
+                <label for="friend">From a friend or other Erasmus student</label>
+              </div>
+
+              <div class="checkbox-option">
+                <input type="checkbox" id="university" name="referralSource[]" value="University">
+                <label for="university">University</label>
+              </div>
+
+              <div class="checkbox-option">
+                <input type="checkbox" id="partners" name="referralSource[]" value="Partners">
+                <label for="partners">Our Partners</label>
+              </div>
+
+              <div class="checkbox-option">
+                <input type="checkbox" id="whatsapp-ref" name="referralSource[]" value="WhatsApp">
+                <label for="whatsapp-ref">WhatsApp or Telegram group</label>
+              </div>
+
+              <div class="checkbox-option">
+                <input type="checkbox" id="reddit" name="referralSource[]" value="Reddit">
+                <label for="reddit">Reddit or online forum</label>
+              </div>
+
+              <div class="checkbox-option other-option">
+                <input type="checkbox" id="other" name="referralSource[]" value="Other">
+                <label for="other">Other (please specify):</label>
+                <input type="text" id="otherSource" name="otherSource" class="other-input">
+              </div>
+            </div>
+
+            <div class="form-navigation">
+              <button type="button" class="prev-btn">Previous</button>
+              <button type="submit" class="submit-btn">Proceed to Payment</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Services Column -->
+      <div class="footer-column">
+        <h4>OUR SERVICES</h4>
+        <ul>
+          <li>
+            <a href="index.html#services">NIF - Portuguese Tax Number</a>
+          </li>
+          <li><a href="index.html#tax-representative">Tax Representative</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacts Column -->
+      <div class="footer-column">
+        <h4>CONTACTS</h4>
+        <ul>
+          <li><a href="tel:+351968073096">+351 913 836 608</a></li>
+          <li>
+            <a href="mailto:info@nif4erasmus.com">info@nif4erasmus.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Callback Column -->
+      <div class="footer-column">
+        <h4>REQUEST A CALLBACK</h4>
+        <p>Enter your phone number, we will contact by Whatsapp.</p>
+        <div class="callback-form">
+          <div class="phone-input">
+            <input type="tel" id="callback-phone" class="phone-field" />
+          </div>
+          <button class="contact-btn">Contact me</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-conditions.html">Terms and Conditions</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/people/NIF-4-Erasmus/61571569951503/?locale=pt_PT" target="_blank"
+          rel="noopener">
+          <img src="assets/images/facebook-icon.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/nif4erasmus/" target="_blank" rel="noopener">
+          <img src="assets/images/instagram-icon.png" alt="Instagram" />
+        </a>
+        <a href="https://www.tiktok.com/@nif4erasmus" target="_blank" rel="noopener">
+          <img src="assets/images/tiktok.png" alt="Tiktok" />
+        </a>
+
+        <a href="https://wa.me/351913836608" target="_blank" rel="noopener">
+          <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

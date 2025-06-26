@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nif4Erasmus - About Us</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+
+    <!-- Tel Input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">NIF 4 <br />ERASMUS</a>
+      <!-- Add this right after the logo in your header -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="partners.html">PARTNERS</a></li>
+          <li><a href="articles.html">ARTICLES</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacts.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Image Section -->
+    <div id="about-hero">
+      <img src="assets/images/articles-hero.jpeg" alt="About Nif4Erasmus" />
+    </div>
+
+    <!-- Articles Section -->
+    <section id="article" class="about-container">
+      <h2 class="left-aligned">
+        The Importance of the NIF When Signing a Rental Contract
+      </h2>
+      <div class="about-content-text">
+        <p>
+          For a rental contract to be unequivocally valid under Portuguese law,
+          it must be registered with the “Finanças” — the Portuguese Tax and
+          Customs Authority (Autoridade Tributária e Aduaneira). For this
+          reason, it’s very important to obtain your Portuguese NIF (tax
+          identification number). You can even do this before you start looking
+          for accommodation or before arriving in Portugal.
+        </p>
+      </div>
+
+      <!-- Update the content section -->
+      <div class="article-body">
+        <div class="article-date">02 June 2025</div>
+        <img
+          src="assets/images/articles/nif-importance.jpeg"
+          alt="Article content image"
+          class="article-content-image"
+        />
+
+        <p>
+          Having the NIF of both parties included in the contract, and ensuring
+          the contract is formalized and registered with the Portuguese Tax
+          Authority (“Finanças”), offers protection against illegal practices —
+          such as informal, verbal, or off-the-record agreements — which provide
+          no legal security.
+        </p>
+        <p>
+          In addition, the NIF allows the tenant to access tax benefits, such as
+          deducting rental expenses on their IRS (Personal Income Tax), as long
+          as the contract is properly registered and includes their NIF. This
+          registration promotes transparency and helps prevent fraud, protecting
+          the tenant from potential abuses.
+        </p>
+
+        <p>
+          Another important point is that the NIF is an official form of
+          identification, ensuring that the contract is linked to the correct
+          person, avoiding confusion or future disputes regarding the person
+          named in the contract. In case any issues arise — such as the need to
+          file a complaint or resolve a conflict — the NIF simplifies the
+          process with judicial or administrative authorities.
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>
+          How can I check if the landlord registered the rental contract with
+          “Finanças” using my NIF?
+        </h3>
+        <p>
+          The tenant can request proof of registration from the landlord, such
+          as a copy of the Modelo 2 rental declaration submitted to “Finanças.”
+        </p>
+        <p>
+          Alternatively, the tenant can check this information directly on the
+          “Portal das Finanças,” where it is possible to verify whether the
+          contract has been properly reported and linked to their tax
+          identification number. Additionally, the presence of electronic rent
+          receipts on “e-Fatura” also indicates that the landlord is complying
+          with tax obligations.
+        </p>
+        <p>
+          Equally important is to mention that issuing rent payment receipts is
+          generally a legal requirement. This official document from “Finanças”
+          must be provided to the tenant by the landlord after each monthly rent
+          payment, but it is only issued if the contract is properly declared.
+          You can learn more about rent receipts below.
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>Why Rent Receipts Are Important for Tenants?</h3>
+        <p>
+          Rent receipts are not just a formality, they are a central element of
+          the tenant’s legal and financial security. Requesting these documents
+          and ensuring they include the tenant’s NIF is essential to guarantee
+          tax benefits, legal protection, and a fair contractual relationship.
+        </p>
+        <h4>1. Proof of payment</h4>
+        <p>
+          Rent receipts serve as official proof that the tenant has fulfilled
+          their obligation to pay the rent. In case of a dispute with the
+          landlord (for example, claims of late or missed payments), the tenant
+          can present these receipts as evidence, protecting themselves against
+          unjustified actions.
+        </p>
+        <h4>2. Tax benefits</h4>
+        <p>
+          When rent receipts are issued with the tenant’s NIF (Tax
+          Identification Number), the rent paid can be included as a deductible
+          expense in the annual IRS (Personal Income Tax) declaration, allowing
+          the tenant to benefit from tax deductions.
+        </p>
+        <h4>3. Legal validation of the contract</h4>
+        <p>
+          Properly issued receipts indicate that the rental contract is
+          registered and declared to the Tax Authority. This contributes to a
+          more transparent relationship between landlord and tenant, ensuring
+          that both comply with their legal obligations. The absence of receipts
+          may indicate informal arrangements or even tax irregularities on the
+          landlord’s part.
+        </p>
+        <h4>4. Protection in case of legal conflicts</h4>
+        <p>
+          In any conflict resolution process, whether through judicial or
+          extrajudicial means, rent receipts serve as valid proof. They can be
+          used to verify dates, amounts paid, tenant identity, and payment
+          regularity, being essential in situations such as contract
+          terminations, evictions, or claims over wrongfully withheld security
+          deposits, among other disputes.
+        </p>
+        <div style="height: 2rem"></div>
+        <p>
+          So, don’t hesitate! Always ask for the Rent Receipts, which must be
+          provided to you by the landlord.
+        </p>
+        <p>
+          These receipts are issued by the Portuguese Tax and Customs Authority
+          (Autoridade Tributária e Aduaneira) and include: the landlord’s name
+          and NIF; the tenant’s name and NIF; property identification; rent
+          amount paid; date of rent payment; the rental period covered; rent
+          receipt number; date of issue of the rent receipt; among other
+          details.
+        </p>
+        <p>
+          You can see an example of a rent receipt in the photo included in this
+          article.
+        </p>
+        <div style="height: 2rem"></div>
+        <p>
+          In short, for the tenant, having and using the NIF in the rental
+          contract is the way to be formally protected, secure tax rights, and
+          ensure the contract’s validity under the law. This promotes greater
+          security and trust in the landlord-tenant relationship, as well as a
+          more transparent and balanced housing market.
+        </p>
+        <p>
+          If you don’t have your NIF yet, obtaining it should be one of your
+          first steps upon arriving (or even before) in Portugal. The good news
+          is that NIF4Erasmus handles everything for you, 100% online, with the
+          simplest and most accessible process on the market. Moreover, the NIF
+          application service already includes the request for your access
+          password to the Portal das Finanças.
+        </p>
+        <p>
+          If you have any other questions or need legal assistance, don’t
+          hesitate to contact us directly!
+        </p>
+      </div>
+
+      <div>
+        <h3 class="left-aligned-brand">More Articles</h3>
+        <div class="partners-grid">
+          <a href="rental-contract.html">
+            <article class="article-card">
+              <div class="article-image">
+                <img
+                  src="assets/images/articles/rental-contract.jpeg"
+                  alt="Tax Guide"
+                />
+              </div>
+              <div class="article-content">
+                <p>Rental Contract: An Essential Document</p>
+              </div>
+            </article>
+          </a>
+
+          <a href="renting-no-scams.html">
+            <article class="article-card">
+              <div class="article-image">
+                <img
+                  src="assets/images/articles/renting-no-scams.jpeg"
+                  alt="Tax Guide"
+                />
+              </div>
+              <div class="article-content">
+                <p>
+                  Renting a House or Room in Portugal Without Falling for Scams
+                  – A Guide for International Students
+                </p>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h4>OUR SERVICES</h4>
+          <ul>
+            <li>
+              <a href="index.html#services">NIF - Portuguese Tax Number</a>
+            </li>
+            <li><a href="index.html#tax-representative">Tax Representative</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts Column -->
+        <div class="footer-column">
+          <h4>CONTACTS</h4>
+          <ul>
+            <li><a href="tel:+351968073096">+351 913 836 608</a></li>
+            <li>
+              <a href="mailto:info@nif4erasmus.com">info@nif4erasmus.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Callback Column -->
+        <div class="footer-column">
+          <h4>REQUEST A CALLBACK</h4>
+          <p>Enter your phone number, we will contact by Whatsapp.</p>
+          <div class="callback-form">
+            <div class="phone-input">
+              <input type="tel" id="callback-phone" class="phone-field" />
+            </div>
+            <button class="contact-btn">Contact me</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-conditions.html">Terms and Conditions</a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/people/NIF-4-Erasmus/61571569951503/?locale=pt_PT"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/nif4erasmus/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/instagram-icon.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@nif4erasmus"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/tiktok.png" alt="Tiktok" />
+          </a>
+
+          <a href="https://wa.me/351913836608" target="_blank" rel="noopener">
+            <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

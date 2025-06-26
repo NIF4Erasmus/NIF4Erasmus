@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nif4Erasmus - About Us</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+
+    <!-- Tel Input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">NIF 4 <br />ERASMUS</a>
+      <!-- Add this right after the logo in your header -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="partners.html">PARTNERS</a></li>
+          <li><a href="articles.html">ARTICLES</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacts.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Image Section -->
+    <div id="about-hero">
+      <img src="assets/images/articles-hero.jpeg" alt="About Nif4Erasmus" />
+    </div>
+
+    <!-- Articles Section -->
+    <section id="article" class="about-container">
+      <h2 class="left-aligned">Rental Contract: An Essential Document</h2>
+      <div class="about-content-text">
+        <p>
+          If you’re planning to study in Portugal, you’ll probably need to rent
+          a room or an apartment. To ensure everything goes smoothly, there is
+          one essential document you should be familiar with: contrato de
+          arrendamento («rental contract»).
+        </p>
+        <p>
+          This document offers you legal protection and helps avoid unpleasant
+          surprises. In this article, we explain some key points you should keep
+          in mind.
+        </p>
+      </div>
+
+      <!-- Update the content section -->
+      <div class="article-body">
+        <div class="article-date">11 June 2025</div>
+        <img
+          src="assets/images/articles/rental-contract.jpeg"
+          alt="Article content image"
+          class="article-content-image"
+        />
+
+        <h3>What is a Rental Contract?</h3>
+        <p>
+          It is a legal, written agreement between the landlord and the tenant.
+          This document outlines the rights and responsibilities of both parties
+          and can protect you in case any issues arise during your stay.
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>What Should Be Included in a Rental Contract?</h3>
+        <p>Some essential elements you should check:</p>
+        <ul>
+          <li>Identification of the parties (landlord and tenant)</li>
+          <li>Property description</li>
+          <li>Rent amount and payment date</li>
+          <li>Duration of the contract</li>
+          <li>Security deposit amount (if any)</li>
+          <li>
+            Included or excluded expenses (water, electricity, internet, etc.)
+          </li>
+          <li>Conditions for termination</li>
+        </ul>
+        <div style="height: 2rem"></div>
+        <h3>Identification of the landlord and tenant</h3>
+        <p>
+          This is a basic but essential point. The rental contract must include
+          the following details of both the landlord and the tenant:
+        </p>
+        <ul>
+          <li>
+            Full name, NIF (Tax Identification Number), identification document
+            number, address, and the designation of who is the landlord and who
+            is the tenant.
+          </li>
+        </ul>
+        <p>
+          If you are not identified in the contract with your name and details,
+          you have no legal protection.
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>Rent amount and payment date</h3>
+        <p>
+          The rent amount is agreed upon by both parties and must be written in
+          the contract. There is no legal “ceiling” for rent in standard
+          contracts, but the landlord cannot change it in the middle of the
+          contract unless under specific conditions set by law (such as the
+          annual adjustment based on an official government index, which can
+          only be applied after one year of the contract’s duration or in the
+          year following the last rent adjustment).
+        </p>
+        <p>Usually:</p>
+        <ul>
+          <li>
+            The rent is paid monthly, usually by bank transfer or another
+            agreed-upon method.
+          </li>
+          <li>
+            The contract should specify the exact payment date (e.g., "by the
+            8th of each month").
+          </li>
+          <li>
+            Every time you pay, the landlord must provide you with a
+            <a href="nif-importance.html">rent receipt</a> issued by the Portuguese
+            Tax and Customs Authority (“Finanças”).
+          </li>
+        </ul>
+        <p>
+          There may be situations where the landlord requests rent payments in
+          advance. Be aware that the law requires this agreement to be in
+          writing and sets a maximum limit of two months’ rent in advance!
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>Duration of the Contract</h3>
+        <p>
+          There are several types of rental contracts, with the most common
+          being the fixed-term contract (which specifies the exact end date of
+          the contract under normal circumstances). The contract must specify:
+        </p>
+        <ul>
+          <li>The type of contract.</li>
+          <li>The start and end dates of the rental period.</li>
+          <li>Whether or not the contract renews automatically.</li>
+        </ul>
+        <div style="height: 2rem"></div>
+        <h3>Security Deposit</h3>
+        <p>
+          The security deposit is an amount the landlord may request as a
+          guarantee to cover any potential damage to the property.
+        </p>
+        <p>
+          It is not required by law, but it is a common practice. Typically,
+          landlords ask for the equivalent of 1 to 2 months' rent as a deposit,
+          considering that the law sets a maximum limit of 2 months' rent for
+          the deposit amount.
+        </p>
+        <p>
+          You should only pay the deposit after signing the contract and
+          confirming that the property is real and in good condition.
+        </p>
+        <p>
+          The security deposit must be returned at the end of the contract,
+          provided there is no damage to the property.
+        </p>
+        <p>
+          Tip: you can ask the landlord to provide a receipt showing the
+          security deposit amount and the date it was paid.
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>Utilities/Expenses</h3>
+        <p>
+          A common mistake is assuming that the rent includes everything, but
+          that’s not always the case.
+        </p>
+        <p>
+          That’s why the contract should clearly state whether utilities are
+          included or not, and specify which ones (water, electricity, gas,
+          internet, building fees...).
+        </p>
+        <p>
+          If they are not included, ask how and when they are paid — and request
+          monthly estimates. Avoid surprises and make sure everything is written
+          down!
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>Contract Termination Conditions</h3>
+        <p>
+          If you need to leave before the end of the contract, you must provide
+          written notice in advance and follow the rules applicable to your
+          contract type. Regarding fixed-term rental contracts, Portuguese law
+          states the following:
+        </p>
+        <ul>
+          <li>
+            You must complete at least one-third of the contract duration.
+          </li>
+          <li>
+            You must notify the landlord at least 60 days in advance if the
+            contract is less than one year; or at least 120 days in advance if
+            the contract is one year or longer.
+          </li>
+          <li>
+            The notice must be given in writing (by registered letter with
+            acknowledgment of receipt).
+          </li>
+        </ul>
+        <p>
+          Of course, in practice, you may find landlords who are flexible — but
+          it’s important that any such agreement is clearly written in the
+          contract or an addendum to avoid misunderstandings.
+        </p>
+        <p>
+          You should also understand that there are other ways to terminate a
+          contract, including considering its duration, so it’s important to
+          find out which legal rules apply to your specific case. If your
+          contract is renewable, don’t forget to check the rules for opposing
+          automatic renewal.
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>Conclusion</h3>
+        <p>
+          Having a clear and legal contract, as well as a valid NIF, are the
+          first two steps for a safe and hassle-free Erasmus experience. Avoid
+          under-the-table rentals, don’t be afraid to ask questions, and if
+          something seems off, trust your instincts, keep copies of everything
+          and stay informed.
+        </p>
+        <p>
+          At NIF4Erasmus, we handle your NIF and help you navigate the legal
+          side of life in Portugal, so you can focus on what really matters:
+          making the most of your international experience.
+        </p>
+        <p>
+          NIF4Erasmus also offers contract drafting services, as well as
+          contract analysis, review, and explanation, in case you want to be
+          sure whether or not to sign a specific rental agreement.
+        </p>
+        <p>
+          We’re here if you need legal assistance, so don’t hesitate to contact
+          us!
+        </p>
+        <div style="height: 2rem"></div>
+        <h3>Quick Checklist</h3>
+        <p>
+          ✅ Is the landlord identified with their full name, NIF (Tax
+          Identification Number), and address?
+        </p>
+        <p>✅ Is the property properly described in the contract?</p>
+        <p>
+          ✅ Does the contract clearly state the rent amount, duration, security
+          deposit, and included expenses?
+        </p>
+        <p>✅ Is the property in good condition and as advertised?</p>
+        <p>✅ Is the contract signed by both parties?</p>
+        <p>✅ Did you receive a receipt for any advance payment?</p>
+      </div>
+
+      <div>
+        <h3 class="left-aligned-brand">More Articles</h3>
+        <div class="partners-grid">
+          <a href="nif-importance.html">
+            <article class="article-card">
+              <div class="article-image">
+                <img
+                  src="assets/images/articles/nif-importance.jpeg"
+                  alt="Tax Guide"
+                />
+              </div>
+              <div class="article-content">
+                <p>The Importance of the NIF When Signing a Rental Contract</p>
+              </div>
+            </article>
+          </a>
+          <a href="renting-no-scams.html">
+            <article class="article-card">
+              <div class="article-image">
+                <img
+                  src="assets/images/articles/renting-no-scams.jpeg"
+                  alt="Tax Guide"
+                />
+              </div>
+              <div class="article-content">
+                <p>
+                  Renting a House or Room in Portugal Without Falling for Scams
+                  – A Guide for International Students
+                </p>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h4>OUR SERVICES</h4>
+          <ul>
+            <li>
+              <a href="index.html#services">NIF - Portuguese Tax Number</a>
+            </li>
+            <li><a href="index.html#tax-representative">Tax Representative</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts Column -->
+        <div class="footer-column">
+          <h4>CONTACTS</h4>
+          <ul>
+            <li><a href="tel:+351968073096">+351 913 836 608</a></li>
+            <li>
+              <a href="mailto:info@nif4erasmus.com">info@nif4erasmus.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Callback Column -->
+        <div class="footer-column">
+          <h4>REQUEST A CALLBACK</h4>
+          <p>Enter your phone number, we will contact by Whatsapp.</p>
+          <div class="callback-form">
+            <div class="phone-input">
+              <input type="tel" id="callback-phone" class="phone-field" />
+            </div>
+            <button class="contact-btn">Contact me</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-conditions.html">Terms and Conditions</a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/people/NIF-4-Erasmus/61571569951503/?locale=pt_PT"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/nif4erasmus/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/instagram-icon.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@nif4erasmus"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/tiktok.png" alt="Tiktok" />
+          </a>
+
+          <a href="https://wa.me/351913836608" target="_blank" rel="noopener">
+            <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

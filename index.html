@@ -1,63 +1,358 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Website Under Construction</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nif4Erasmus</title>
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Dela Gothic One', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+    <!-- Prefech -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="prefetch" href="partners.html" />
+    <link rel="prefetch" href="about.html" />
+    <link rel="prefetch" href="contacts.html" />
+    <link rel="prefetch" href="faq.html" />
+    <link rel="prefetch" href="articles.html" />
+    <link rel="prefetch" href="form.html" />
 
-    h1 {
-      font-size: 2.5rem;
-      color: #1828f8;
-    }
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
 
-    p {
-      font-size: 1.2rem;
-      margin: 20px 0;
-    }
+    <!-- Tel Input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
-    .logo {
-      font-size: 2rem;
-      color: #1828f8;
-      margin-bottom: 30px;
-    }
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home" class="logo">NIF 4 <br />ERASMUS</a>
+      <!-- Add this right after the logo in your header -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="#services" class="active">SERVICES</a></li>
+          <li><a href="partners.html">PARTNERS</a></li>
+          <li><a href="articles.html">ARTICLES</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacts.html">CONTACTS</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    .spinner {
-      margin-top: 30px;
-      width: 40px;
-      height: 40px;
-      border: 5px solid #1828f8;
-      border-top: 5px solid transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
+    <!-- Welcome Section -->
+    <section id="home">
+      <video autoplay muted loop playsinline id="myVideo">
+        <source src="assets/videos/Video_Homepage_.mp4" type="video/mp4" />
+        <!-- Fallback image in case video doesn't load -->
+        <img src="assets/images/home.jpeg" alt="Welcome Background" />
+      </video>
+      <div class="content fade-in-up">
+        <h1 class="fade-in-up fade-in-up-delay-1">
+          GET YOUR NIF <br />
+          WITHOUT THE <br />
+          STRESS!
+        </h1>
+        <p class="fade-in-up fade-in-up-delay-2">
+          No queues, no bureaucracy.<br />
+          Request your NIF 100% online, from anywhere in the world!
+        </p>
+        <a href="#services" class="scroll-link fade-in-up fade-in-up-delay-3">ORDER YOUR NIF</a>
+      </div>
+    </section>
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-</head>
-<body>
-  <div class="logo">NIF4Erasmus</div>
-  <h1>We’re working on something great!</h1>
-  <p>This website is currently under development. Please check back soon.</p>
-  <div class="spinner"></div>
-</body>
+    <!-- Services Section -->
+    <section id="services">
+      <!-- Our Service Section -->
+      <div class="about-container fade-in-up">
+        <h2>OUR SERVICE</h2>
+        <p class="services-intro fade-in-up fade-in-up-delay-1">
+          Ready to take your first step towards moving to Portugal? <br />
+          Full support to help you feel at home while you study.
+        </p>
+
+        <div class="services-cards">
+          <div class="service-card fade-in-up fade-in-up-delay-2">
+            <h3>NIF</h3>
+            <p>
+              The NIF (tax number) is the first document you need when moving to
+              Portugal.
+            </p>
+            <button
+              class="service-btn"
+              onClick="document.getElementById('three-easy-steps').scrollIntoView();"
+            >
+              <h4>
+                <span class="price-amount">€50</span>
+              </h4>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Get your NIF Section -->
+      <div class="about-container colored-background fade-in-up ">
+        <h3 class="left-aligned fade-in-up fade-in-up-delay-1">GET YOUR NIF</h3>
+        <div class="about-content">
+          <div class="about-text fade-in-up fade-in-up-delay-2">
+            <p>
+              The NIF (Número de Identificação Fiscal) is your Portuguese tax
+              identification number, and it’s essential for everyday tasks like
+              renting accommodation, opening a bank account or getting a free public
+              transport card.
+            </p>
+            <p>
+              <b> Price: 50€ </b>
+            </p>
+            <a
+              class="get-nif-btn"
+              href="form.html"
+              style="text-decoration: none"
+              >ORDER YOUR NIF NOW</a
+            >
+          </div>
+
+          <div class="about-image fade-in-right fade-in-right-delay-2">
+            <img
+              src="assets/images/nif-process.jpeg"
+              alt="NIF Application Process"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Requirements section -->
+      <div class="about-container fade-in-up">
+        <h3 class="right-aligned fade-in-up fade-in-up-delay-1">REQUIREMENTS</h3>
+        <div class="about-content">
+          <div class="about-image fade-in-left fade-in-left-delay-2">
+            <img src="assets/images/documents.jpeg" alt="Required Documents" />
+          </div>
+          <div class="about-text fade-in-up fade-in-up-delay-2" style="display: flex; align-items: center">
+            <div class="documents-text">
+              <p class="documents-intro">
+                <b> You will need just 2 documents: </b>
+              </p>
+              <ul class="documents-list">
+                <li>
+                  A valid identification document
+                  <ul class="nested-list">
+                    <li>For EU Citizens: National ID Card or Passport</li>
+                    <li>For Non-EU Citizens: Passport</li>
+                  </ul>
+                </li>
+                <li>Proof of address.</li>
+              </ul>
+              <p>Additional requirements apply for minors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tax representative Section -->
+      <div id="tax-representative" class="about-container colored-background fade-in-up">
+        <h3 class="left-aligned fade-in-up fade-in-up-delay-1">GET A TAX REPRESENTATIVE</h3>
+        <div class="about-content fade-in-up fade-in-up-delay-2">
+          <div class="about-text">
+            <p>
+              <b>ONLY FOR NON EU/EEA CITIZENS</b>
+            </p>
+            <p>
+              Getting a tax representative in Portugal is a requirement for
+              non-EU/EEA Citizens in order to obtain a Portuguese NIF.
+            </p>
+            <p>
+              The tax representative acts as an intermediary who will help you handle your tax
+              obligations and communicate with the Portuguese tax authorities
+              (Autoridade Tributária) on your behalf.
+            </p>
+            <p>
+              The price includes both the NIF request and the appointment of a tax representative.
+            </p>
+            <p>
+              <b> PRICE: 100 € </b>
+            </p>
+          </div>
+          <div class="about-image fade-in-right fade-in-right-delay-2">
+            <img
+              src="assets/images/tax-representative.jpeg"
+              alt="Get a tax representative"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- As a student. Why should I request a NIF? Section -->
+      <div class="about-container fade-in-up">
+        <h3 class="left-aligned fade-in-up fade-in-up-delay-1">WHY SHOULD I REQUEST A NIF?</h3>
+
+        <div class="student-nif-item fade-in-up fade-in-up-delay-2">
+          <h3>ATTEND A LOCAL UNIVERSITY</h3>
+          <p>
+            Some Portuguese universities require a NIF for Erasmus students to
+            complete their enrollment.
+          </p>
+        </div>
+
+        <div class="student-nif-item fade-in-up fade-in-up-delay-2">
+          <h3>GETTING A FREE SUB-23 PUBLIC TRANSPORT CARD</h3>
+          <p>
+            If you're under 23 years old, you can get a free public transport
+            pass…but only with a valid NIF.
+          </p>
+        </div>
+
+        <div class="student-nif-item fade-in-up fade-in-up-delay-2">
+          <h3>SIGN A RENTAL CONTRACT</h3>
+          <p>
+            Protect yourself from scams! A valid rental contract must be
+            registered with the tax office and linked to your NIF.
+          </p>
+        </div>
+        <div class="student-nif-item fade-in-up fade-in-up-delay-2">
+          <h3>OPEN A BANK ACCOUNT</h3>
+          <p>
+            A NIF is mandatory to open and operate a Portuguese bank account.
+          </p>
+        </div>
+        <div class="student-nif-item fade-in-up fade-in-up-delay-2">
+          <h3>SIGN A MOBILE PHONE CONTRACT</h3>
+          <p>
+            Getting a Portuguese number? You'll need a NIF to sign a mobile
+            phone plan.
+          </p>
+        </div>
+      </div>
+
+      <!-- Add this after the student-nif-section div -->
+      <div id="three-easy-steps" class="about-container fade-in-up">
+        <h3 class="process-flow-title fade-in-up fade-in-up-delay-1">GET YOUR NIF IN 3 EASY STEPS!</h3>
+
+        <div class="about-content stretch">
+          <div class="process-step fade-in-up fade-in-up-delay-2">
+            <div class="step-content">
+              <h3 class="step-content-text">PLACE YOUR ORDER</h3>
+              <p>Fill out our online form and complete the payment.</p>
+            </div>
+          </div>
+
+          <div class="process-step fade-in-up fade-in-up-delay-2">
+            <div class="step-content">
+              <h3 class="step-content-text">SIGN YOUR POWER OF ATTORNEY</h3>
+              <p>This allows us to request your NIF on your behalf.</p>
+            </div>
+          </div>
+
+          <div class="process-step fade-in-up fade-in-up-delay-2">
+            <div class="step-content">
+              <h3 class="step-content-text">RECEIVE YOUR NIF</h3>
+              <p>
+                You will receive your NIF via email and the official PDF from
+                Portal das Finanças.
+              </p>
+            </div>
+          </div>
+        </div>
+        <a class="get-nif-btn fade-in-up fade-in-up-delay-3" href="form.html" style="text-decoration: none"
+          >ORDER NOW YOUR NIF!</a
+        >
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h4>OUR SERVICES</h4>
+          <ul>
+            <li>
+              <a href="index.html#services">NIF - Portuguese Tax Number</a>
+            </li>
+            <li><a href="index.html#tax-representative">Tax Representative</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts Column -->
+        <div class="footer-column">
+          <h4>CONTACTS</h4>
+          <ul>
+            <li><a href="tel:+351968073096">+351 913 836 608</a></li>
+            <li>
+              <a href="mailto:info@nif4erasmus.com">info@nif4erasmus.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Callback Column -->
+        <div class="footer-column">
+          <h4>REQUEST A CALLBACK</h4>
+          <p>Enter your phone number, we will contact by Whatsapp.</p>
+          <div class="callback-form">
+            <div class="phone-input">
+              <input type="tel" id="callback-phone" class="phone-field" />
+            </div>
+            <button class="contact-btn">Contact me</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-conditions.html">Terms and Conditions</a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/people/NIF-4-Erasmus/61571569951503/?locale=pt_PT"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/nif4erasmus/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/instagram-icon.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@nif4erasmus"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/tiktok.png" alt="Tiktok" />
+          </a>
+
+          <a href="https://wa.me/351913836608" target="_blank" rel="noopener">
+            <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+
+    <!-- Transition overlay -->
+  </body>
 </html>

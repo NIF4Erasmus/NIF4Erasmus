@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nif4Erasmus - About Us</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+
+    <!-- Tel Input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">NIF 4 <br />ERASMUS</a>
+      <!-- Add this right after the logo in your header -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="partners.html">PARTNERS</a></li>
+          <li><a href="articles.html">ARTICLES</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacts.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Image Section -->
+    <div id="about-hero">
+      <img src="assets/images/articles-hero.jpeg" alt="About Nif4Erasmus" />
+    </div>
+
+    <!-- Articles Section -->
+    <section id="articles" class="about-container">
+      <h2 class="left-aligned">ARTICLE TITLE</h2>
+      <div class="about-content-text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
+          eleifend urna. Nulla facilisi. Praesent sollicitudin posuere felis, eu
+          posuere odio sodales in. Fusce mi arcu, placerat nec dictum nec,
+          egestas quis tellus. Vestibulum accumsan ex nec ullamcorper imperdiet.
+          Curabitur quis neque facilisis, rhoncus lectus ut, fermentum lectus.
+          Morbi risus elit, imperdiet ut luctus et, facilisis quis magna.
+          Vestibulum eu turpis sem.
+        </p>
+      </div>
+
+      <!-- Update the content section -->
+      <div class="article-body">
+
+        <div class="article-date">7 June 2025</div>
+        <img src="assets/images/partner-2.jpeg" alt="Article content image" class="article-content-image" />
+
+        <p>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
+          eleifend urna. Nulla facilisi. Praesent sollicitudin posuere felis, eu
+          posuere odio sodales in. 
+        </p>
+
+        <p>
+          Vestibulum accumsan ex nec ullamcorper imperdiet.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
+          eleifend urna. 
+        </p>
+      </div>
+
+      <div>
+        <h3 class="left-aligned brand-typo">More Articles</h2>
+          <div class="partners-grid">
+            
+            <article class="article-card">
+              <div class="article-image">
+                <img src="assets/images/partner-3.jpeg" alt="Tax Guide" />
+              </div>
+              <div class="article-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                  vel ante id turpis iaculis molestie. Nulla ac arcu quis odio.
+                </p>
+              </div>
+            </article>
+    
+            <article class="article-card">
+              <div class="article-image">
+                <img src="assets/images/partner-3.jpeg" alt="Tax Guide" />
+              </div>
+              <div class="article-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                  vel ante id turpis iaculis molestie. Nulla ac arcu quis odio.
+                </p>
+              </div>
+            </article>
+            <article class="article-card">
+              <div class="article-image">
+                <img src="assets/images/partner-3.jpeg" alt="Tax Guide" />
+              </div>
+              <div class="article-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                  vel ante id turpis iaculis molestie. Nulla ac arcu quis odio.
+                </p>
+              </div>
+            </article>
+          </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h4>OUR SERVICES</h4>
+          <ul>
+            <li>
+              <a href="index.html#services">NIF - Portuguese Tax Number</a>
+            </li>
+            <li><a href="index.html#tax-representative">Tax Representative</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts Column -->
+        <div class="footer-column">
+          <h4>CONTACTS</h4>
+          <ul>
+            <li><a href="tel:+351968073096">+351 913 836 608</a></li>
+            <li>
+              <a href="mailto:info@nif4erasmus.com">info@nif4erasmus.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Callback Column -->
+        <div class="footer-column">
+          <h4>REQUEST A CALLBACK</h4>
+          <p>Enter your phone number, we will contact by Whatsapp.</p>
+          <div class="callback-form">
+            <div class="phone-input">
+              <input type="tel" id="callback-phone" class="phone-field" />
+            </div>
+            <button class="contact-btn">Contact me</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-conditions.html">Terms and Conditions</a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/people/NIF-4-Erasmus/61571569951503/?locale=pt_PT"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/nif4erasmus/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/instagram-icon.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@nif4erasmus"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/tiktok.png" alt="Tiktok" />
+          </a>
+
+          <a href="https://wa.me/351913836608" target="_blank" rel="noopener">
+            <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

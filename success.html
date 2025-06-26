@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nif4Erasmus - Success</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+
+    <!-- Tel Input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="scripts/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">NIF 4 <br />ERASMUS</a>
+      <!-- Add this right after the logo in your header -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="partners.html">PARTNERS</a></li>
+          <li><a href="articles.html" class="active">ARTICLES</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contacts.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Hero Image Section -->
+    <div id="about-hero">
+      <img src="assets/images/partners-hero.jpeg" alt="Success Page" />
+    </div>
+
+    <!-- Success Section -->
+    <section id="success" class="about-container">
+      <div class="success-content">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" width="100" height="100">
+            <circle cx="12" cy="12" r="11" fill="#1828f8" />
+            <path
+              d="M7 13l3 3 7-7"
+              stroke="white"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+        </div>
+        <!-- Add this right after the success-icon div -->
+        <div class="email-status" style="display: none">
+          <p class="status-message">Sending confirmation email...</p>
+        </div>
+        <h2 class="center-aligned">PAYMENT SUCCESSFUL!</h2>
+        <div class="success-message">
+          <p>
+            Thanks for choosing NIF4Erasmus! We’re excited to help you get
+            started in Portugal!
+          </p>
+          <p>
+            Our team is now reviewing your application to make sure everything’s
+            good to go.
+          </p>
+          <p>
+            We’ll reach out to you soon via the email you added in the form.
+          </p>
+        </div>
+        <div class="next-steps">
+          <h3>WHAT'S NEXT?</h3>
+          <ol>
+            <li>Our team will review your submitted documents</li>
+            <li>
+              We will contact you via email to provide the Power of Attorney or
+              to request any required corrections
+            </li>
+            <li>
+              As soon as we receive the signed Power of Attorney, we submit your
+              NIF request
+            </li>
+            <li>
+              You will get your Portuguese NIF by email as a PDF document which
+              is the official document issued by the Portuguese tax authority
+            </li>
+          </ol>
+        </div>
+        <div class="contact-info-box">
+          <h3>NEED HELP?</h3>
+          <p>If you have any questions, please don't hesitate to contact us:</p>
+          <ul>
+            <li>WhatsApp: <a href="tel:+351913836608">+351 913 836 608</a></li>
+            <li>
+              Email:
+              <a href="mailto:info@nif4erasmus.com">info@nif4erasmus.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="button-group">
+          <a href="index.html" class="home-btn">Return to Home</a>
+          <a href="faq.html" class="faq-btn">View FAQs</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h4>OUR SERVICES</h4>
+          <ul>
+            <li>
+              <a href="index.html#services">NIF - Portuguese Tax Number</a>
+            </li>
+            <li>
+              <a href="index.html#tax-representative">Tax Representative</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contacts Column -->
+        <div class="footer-column">
+          <h4>CONTACTS</h4>
+          <ul>
+            <li><a href="tel:+351968073096">+351 913 836 608</a></li>
+            <li>
+              <a href="mailto:info@nif4erasmus.com">info@nif4erasmus.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Callback Column -->
+        <div class="footer-column">
+          <h4>REQUEST A CALLBACK</h4>
+          <p>Enter your phone number, we will contact by Whatsapp.</p>
+          <div class="callback-form">
+            <div class="phone-input">
+              <input type="tel" id="callback-phone" class="phone-field" />
+            </div>
+            <button class="contact-btn">Contact me</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-conditions.html">Terms and Conditions</a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/people/NIF-4-Erasmus/61571569951503/?locale=pt_PT"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/nif4erasmus/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/instagram-icon.png" alt="Instagram" />
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@nif4erasmus"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/tiktok.png" alt="Tiktok" />
+          </a>
+
+          <a href="https://wa.me/351913836608" target="_blank" rel="noopener">
+            <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

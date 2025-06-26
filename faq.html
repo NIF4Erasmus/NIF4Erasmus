@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nif4Erasmus - About Us</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Tel Input -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">NIF 4 <br />ERASMUS</a>
+      <!-- Add this right after the logo in your header -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="index.html#services">SERVICES</a></li>
+          <li><a href="partners.html">PARTNERS</a></li>
+          <li><a href="articles.html">ARTICLES</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="contacts.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Image Section -->
+    <div id="about-hero">
+      <img
+        style="object-position: 79% center"
+        src="assets/images/faq-hero-cropped.jpeg"
+        alt="About Nif4Erasmus"
+      />
+    </div>
+
+    <!-- FAQ Title Section -->
+    <section id="faq" class="about-container">
+      <h2 class="left-aligned fade-in-up">FAQ</h2>
+      <div class="about-content-text fade-in-up">
+        <p>
+          At NIF4Erasmus, we understand that navigating the Erasmus experience
+          can raise many questions, especially when it comes to managing your
+          NIF and understanding the tax system abroad.
+        </p>
+        <p>
+          In this section, we've gathered answers to the most common questions
+          from students just like you, if you can't find what you're looking
+          for, feel free to reach out to us for further assistance!
+        </p>
+      </div>
+      <!-- about NIF Section -->
+      <div class="faq-list fade-in-up fade-in-up-delay-1">
+        <h3 class="faq-subtitle">... about NIF</h3>
+
+        <div class="faq-item">
+          <button class="faq-question">What is a NIF?</button>
+          <div class="faq-answer">
+            <p>
+              The NIF (Número de Identificação Fiscal) is your taxpayer
+              identification number in Portugal. It’s essential for many
+              everyday tasks, like signing a rental contract, opening a bank
+              account, getting a mobile phone plan, or signing up for health
+              insurance. You may also hear it called the "Número de
+              Contribuinte".
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I get a NIF without being in Portugal?
+          </button>
+          <div class="faq-answer">
+            <p>Yes, you can request your NIF from anywhere in the world.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to get my NIF?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Usually, the process of obtaining your NIF takes between 3 to 5
+              business days. This duration is subject to variation based on
+              certain factors, primarily hinging on the operational efficiency
+              of the Portuguese Tax Office.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Which nationalities does NIF4Erasmus support for this NIF service?
+          </button>
+          <div class="faq-answer">
+            <p>We support all nationalities for our NIF service.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What documents do I need to request a NIF?
+          </button>
+          <div class="faq-answer">
+            <div class="documents-text">
+              <p class="documents-intro">
+                <b>You just need 2 documents to request your NIF: </b>
+              </p>
+              <ul class="documents-list">
+                <li>
+                  A valid identification document
+                  <ul class="nested-list">
+                    <li>For EU Citizens: National ID Card or Passport</li>
+                    <li>For Non-EU Citizens: Passport</li>
+                  </ul>
+                </li>
+                <li>Proof of address.</li>
+              </ul>
+              <p>Additional requirements apply for minors.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What documents do I need to request a NIF for a minor/child?
+          </button>
+          <div class="faq-answer">
+            <div class="documents-text">
+              <p class="documents-intro">
+                <b>
+                  If you are applying for a NIF for a minor under the age of 18,
+                  you need to submit the following additional requirements:
+                </b>
+              </p>
+              <ul class="documents-list">
+                <li>
+                  Birth certificate, Adoption certificate, or Legal guardianship
+                  order.
+                </li>
+                <li>Copy of one parent's (or legal guardian) passport.</li>
+                <li>
+                  Proof of Address in the name of a parent or legal guardian.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What can I use as proof of address?
+          </button>
+          <div class="faq-answer">
+            <div class="documents-text">
+              <p class="documents-intro">
+                <b
+                  >A proof of address is a document used to verify a person's
+                  residential address for their NIF application. You can submit
+                  one of the following documents, provided it meets the
+                  conditions below:
+                </b>
+              </p>
+              <ul class="documents-list">
+                <li>
+                  Driver’s Licence
+                  <ul class="nested-list">
+                    <li>Must be valid (not expired).</li>
+                    <li>Include clear photos of both front and back.</li>
+                    <li>
+                      Must clearly show your residential address and expiry
+                      date.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Bank Statement
+                  <ul class="nested-list">
+                    <li>Must be the first page of a recent statement.</li>
+                    <li>
+                      Issue date must be visible and within the last 3 months.
+                    </li>
+                    <li>
+                      Must be an authentic bank statement - other documents like
+                      confirmation letters or certificates will not be accepted.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Utility Bill
+                  <ul class="nested-list">
+                    <li>
+                      Must show the issue date (within the last 3 months).
+                    </li>
+                    <li>
+                      Accepted providers include: electricity, water, mobile
+                      SIM, internet, cable, etc.
+                    </li>
+                  </ul>
+                </li>
+                <p>
+                  Name and surname on your proof of address: Your first name and
+                  surname on your Proof of Address must match your
+                  passport/National ID card exactly.
+                </p>
+                <p>
+                  Language of the document: If the document is not written in
+                  the Roman alphabet, you need to provide an English
+                  translation.
+                </p>
+                <p>
+                  <b>Minor:</b> If you are requesting a NIF for a minor (child
+                  under 18), please include the proof of address of one of the
+                  parents.
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            When will I receive my password to Portal das Finanças?
+          </button>
+          <div class="faq-answer">
+            <p>
+              After NIF4Erasmus receives your NIF, we will automatically request
+              your password from the Portuguese tax office. Your password will
+              be delivered to your address (EU/EEA Citizen) or fiscal
+              representative (Non EU/EEA Citizen) by physical mail and usually
+              takes about 3 - 4 weeks.
+            </p>
+            <p>
+              If we are your tax representative, once your password has been
+              received, we will send you a copy via email. You will now be able
+              to access the Portuguese tax office website, also known as Portal
+              das Finanças. After you become a tax resident in Portugal, you
+              will be able to update your address to your Portuguese address.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Where can I find my NIF number?</button>
+          <div class="faq-answer">
+            <p>
+              You can find your NIF in the upper left corner of the PDF document
+              provided by Finanças.
+            </p>
+            <img
+              src="assets/images/FAQ_9.png"
+              alt="NIF location in document"
+              class="faq-image"
+            />
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Does the NIF have an expiry date?
+          </button>
+          <div class="faq-answer">
+            <p>
+              No, NIF doesn’t have an expiry date, it is issued to you for life.
+            </p>
+            <!-- TODO: Add image of NIF document -->
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What are the requirements for the signed Power of Attorney?
+          </button>
+          <div class="faq-answer">
+            <div class="documents-text">
+              <ul class="documents-list">
+                <li>
+                  The signature on the Power of Attorney must match the one on
+                  your passport/National ID card exactly.
+                </li>
+                <li>The entire signed document is in the frame.</li>
+                <li>No light reflections or shadows.</li>
+                <li>All details are fully legible.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I sign the Power of Attorney electronically?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes! An electronic signature is accepted provided that it matches
+              the signature on your passport/national ID card exactly.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need to notarize the Power of Attorney?
+          </button>
+          <div class="faq-answer">
+            <p>
+              No, you do not need to notarize the Power of Attorney document.
+              You simply need to make sure that your signature on the Power of
+              Attorney document matches the one on your passport exactly.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Which authority issues the NIF in Portugal?
+          </button>
+          <div class="faq-answer">
+            <p>
+              The NIF is issued by the Portuguese Tax and Customs Authority
+              (Autoridade Tributária e Aduaneira), commonly referred to as
+              Finanças.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is the NIF just a number or is it a card?
+          </button>
+          <div class="faq-answer">
+            <p>
+              The NIF (Número de Identificação Fiscal) is just a number, not a
+              physical card. In Portugal, the physical NIF card no longer
+              exists. Once your NIF is issued, you will receive it in digital
+              format.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need a NIF to rent a house in Portugal?
+          </button>
+          <div class="faq-answer">
+            <p>Yes, you need a NIF to rent a house in Portugal.</p>
+            <p>
+              Rental contracts must be officially registered on the Portuguese
+              Tax Authority’s platform (Portal das Finanças), and for that, all
+              parties involved - including the tenant - must have a valid NIF.
+              It’s highly recommended to obtain your NIF before searching for
+              accommodation, as most landlords will ask for it upfront.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need a NIF before opening a bank account in Portugal?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes. A NIF is mandatory to open a bank account in Portugal. Banks
+              will require it as part of your identification and tax
+              registration process.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I request a NIF even if I don’t stay the full semester/year in
+            Portugal?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, you can. There is no minimum stay required to obtain a NIF.
+              Even if you’re staying in Portugal for just a few months, having a
+              NIF is often necessary for basic tasks like signing a lease or
+              getting a phone plan.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- about Tax Representative Section -->
+      <div class="faq-list fade-in-up fade-in-up-delay-1">
+        <h3 class="faq-subtitle">... about TAX REPRESENTATION</h3>
+
+        <div class="faq-item">
+          <button class="faq-question">What is tax representation?</button>
+          <div class="faq-answer">
+            <p>
+              The tax representation is a legal service that allows
+              non-residents in Portugal to have a representative in the country
+              for tax purposes. This representative will handle all tax-related
+              matters, such as filing taxes and communicating with the
+              Portuguese tax authorities on your behalf.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Who needs a tax representative?</button>
+          <div class="faq-answer">
+            <p>
+              Getting a tax representative in Portugal is a requirement for
+              non-EU/EEA Citizen, in order to obtain a Portuguese NIF.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is there a difference between tax representative and fiscal
+            representative?
+          </button>
+          <div class="faq-answer">
+            <p>
+              No, there is no difference between a tax representative and a
+              fiscal representative, both terms refer to the same role in
+              Portugal.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Who will be my tax representative in Portugal?
+          </button>
+          <div class="faq-answer">
+            <p>
+              One of the lawyers from NIF4Erasmus will be your tax
+              representative in Portugal, managing all the necessary paperwork
+              and communication with the Portuguese tax authorities on your
+              behalf.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Where can I find my fiscal representative’s information?
+          </button>
+          <div class="faq-answer">
+            <p>You can find that information at the bottom of the document.</p>
+            <img
+              src="assets/images/FAQ_23.png"
+              alt="NIF location in document"
+              class="faq-image"
+            />
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I change my tax representative?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, you can change your fiscal representative. If you wish to
+              switch to a different representative, you will need to inform
+              NIF4Erasmus.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you offer ongoing fiscal representation?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, NIF4Erasmus offers ongoing fiscal representation for
+              non-residents. This service is available annually (100€/year),
+              ensuring that your tax-related matters are always handled
+              efficiently.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How to cancel your fiscal representation with NIF4Erasmus?
+          </button>
+          <div class="faq-answer">
+            <p>
+              To cancel your fiscal representation with NIF4Erasmus, you will
+              need to contact us by message or email. We will guide you through
+              the cancellation process and ensure that all necessary steps are
+              taken to terminate your representation.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I be fined if I don’t have a tax representative?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, if you are a non-resident in Portugal and fail to have a tax
+              representative when required, you could face penalties or fines.
+              Having a tax representative ensures compliance with Portuguese tax
+              laws.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Will you notify me when my fiscal representation expires?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, we will notify you in advance before your fiscal
+              representation expires, so you can renew the service and continue
+              your tax representation without any interruptions.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need fiscal representation if I have a Portuguese address?
+          </button>
+          <div class="faq-answer">
+            <p>
+              If you have a permanent Portuguese address and are considered a
+              resident for tax purposes, you may not need fiscal representation.
+              However, if you are still classified as a non-resident for tax
+              purposes, fiscal representation may still be necessary
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about NIF4Erasmus Service Section  -->
+      <div class="faq-list fade-in-up fade-in-up-delay-1">
+        <h3 class="faq-subtitle">... about NIF4Erasmus service</h3>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How does the process with NIF4Erasmus work?
+          </button>
+          <div class="faq-answer">
+            <p>
+              The process is straightforward: first, you fill out the form,
+              submit the required documents, and make the payment. After that,
+              we will review the documentation. If there is anything that is not
+              in compliance, we will ask you to provide the necessary
+              corrections. Once everything is in order, we will send you the
+              power of attorney for your signature. After receiving the signed
+              power of attorney, we will submit your application to the
+              Portuguese tax authorities (Finanças). We will guide you every
+              step of the way to ensure a smooth experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What happens after I submit my documents?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Once you submit your documents, we’ll review them to ensure
+              everything is in order. After that, we will send the power of
+              attorney for your signature. Once signed, we will submit your
+              application to the Portuguese tax authorities (Finanças). You will
+              receive your NIF directly from us, and we’ll notify you when it’s
+              ready.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Is the service 100% online?</button>
+          <div class="faq-answer">
+            <p>
+              Yes, the service is 100% online. You can submit your documents,
+              communicate with us, and receive your NIF all without needing to
+              visit our office.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Will I get help if there’s an issue with Finanças?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, if any issues arise with the Finanças, we are here to help.
+              Our team will assist you in resolving the matter and ensuring that
+              your NIF is issued without problems.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is there refund if I cancel my request?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Refunds are only available if the cancellation is made before the
+              process begins. Once we’ve submitted your documents to the
+              authorities, no refund will be issued, unless there is an
+              administrative or documentation issue that prevents the issuance
+              of the NIF
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What is included in the fee?</button>
+          <div class="faq-answer">
+            <p>
+              The fee includes the full processing of your NIF application,
+              document verification, submission to the tax authorities, request
+              for your password (palavra passe) on the Finanças portal, and our
+              support throughout the entire process. You will receive your NIF
+              upon completion.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How much does it cost?</button>
+          <div class="faq-answer">
+            <p>
+              The cost of the NIF service is €50, if fiscal representation is
+              required the cost will be €100.
+            </p>
+            <p>
+              This covers all steps in the application process, including the
+              request for your password (palavra passe) on the Finanças portal,
+              as well as customer support until you receive your NIF.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            I´m not an Erasmus student, can i also request a NIF with
+            NIF4Erasmus?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, absolutely! Although NIF4Erasmus was created with Erasmus
+              students in mind, our service is open to anyone who is interested
+              or needs a Portuguese tax number (NIF). If you´re moving to
+              Portugal and need a NIF, we´re here to help – regardless of your
+              student status.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Does the NIF4Erasmus team provide other services?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, we do. Since we are lawyers, we can assist with other legal
+              services you may need. Just get in touch with us and let us know
+              how we can help!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content-text fade-in-up fade-in-up-delay-2">
+        <p>
+          Didn’t find the answer you were looking for? Reach out to us by email
+          or message and we’ll be happy to assist you.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h4>OUR SERVICES</h4>
+          <ul>
+            <li>
+              <a href="index.html#services">NIF - Portuguese Tax Number</a>
+            </li>
+            <li><a href="index.html#tax-representative">Tax Representative</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacts Column -->
+        <div class="footer-column">
+          <h4>CONTACTS</h4>
+          <ul>
+            <li><a href="tel:+351968073096">+351 913 836 608</a></li>
+            <li>
+              <a href="mailto:info@nif4erasmus.com">info@nif4erasmus.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Callback Column -->
+        <div class="footer-column">
+          <h4>REQUEST A CALLBACK</h4>
+          <p>Enter your phone number, we will contact by Whatsapp.</p>
+          <div class="callback-form">
+            <div class="phone-input">
+              <input type="tel" id="callback-phone" class="phone-field" />
+            </div>
+            <button class="contact-btn">Contact me</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-conditions.html">Terms and Conditions</a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/people/NIF-4-Erasmus/61571569951503/?locale=pt_PT"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/facebook-icon.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.instagram.com/nif4erasmus/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/instagram-icon.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@nif4erasmus"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/images/tiktok.png" alt="Tiktok" />
+          </a>
+
+          <a href="https://wa.me/351913836608" target="_blank" rel="noopener">
+            <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
