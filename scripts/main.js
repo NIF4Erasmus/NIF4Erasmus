@@ -647,7 +647,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } else {
       // Redirect to home if no form data
-      window.location.href = "/Nif4Erasmus/index.html";
+      window.location.href = "/index.html";
     }
   }
 
