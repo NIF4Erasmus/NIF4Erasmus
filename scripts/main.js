@@ -286,6 +286,24 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      // Validate file sizes (max 5MB)
+      const idCardInput = this.querySelector('input[name="idCard"]');
+      const proofOfAddressInput = this.querySelector('input[name="proofOfAddress"]');
+      const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+    
+      if (idCardInput.files[0] && idCardInput.files[0].size > maxSize) {
+        alert("ID Card file is too large. Maximum allowed size is 5MB.");
+        submitBtn.textContent = "Proceed to Payment";
+        submitBtn.disabled = false;
+        return;
+      }
+      if (proofOfAddressInput.files[0] && proofOfAddressInput.files[0].size > maxSize) {
+        alert("Proof of Address file is too large. Maximum allowed size is 5MB.");
+        submitBtn.textContent = "Proceed to Payment";
+        submitBtn.disabled = false;
+        return;
+      }
+
       try {
         const formData = new FormData(this);
 
