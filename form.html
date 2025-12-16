@@ -159,16 +159,19 @@
 
             <div class="form-group">
               <label for="idCard">Valid Identification Card *</label>
-              <small>For UE Citizen: National ID card or Passport</br>
-                For Non-UE/EEA Citizen: Passport</small>
+
+               <small style="color: black;">
+                Upload a scanned document (PDF only)<br><br>
+               </small>
+
+              <small style="color: black;">
+               - For EU Citizens: National ID Card (include both front and back) or Passport (include information and photo pages)<br>
+               - For Non-EU/EEA Citizens: Passport (include information and photo pages)<br><br> <!-- espaço extra -->
+                
+                ❌ Photos or screenshots are not accepted<br>
+                📄 Ensure the document is clean and legible, without watermarks, shadows, fingers, or other objects
+              </small>
         
-              <small class="file-help">
-               Upload a scanned document (PDF only)<br>
-              - For ID cards: include both front and back<br>
-              - For passports: include the information page and photo page<br>
-               📄 Ensure the document is clean and legible, without watermarks, shadows, fingers, or other objects
-               ❌ Photos or screenshots are not accepted<br>
-                </small>
               <input
                 type="file"
                 id="idCard"
@@ -177,11 +180,13 @@
                 required
                 />
 
-                <small class="file-help">
-                  Max size: 5MB<br>
-                  <em>Your personal information will be kept confidential.</em>
-                </small>
-              </div>
+            <small style="color: black;">
+            Max size: 5MB<br>
+           Accepted format: PDF<br>
+            <em>Your personal information will be kept confidential.</em>
+          </small>
+        </div>
+            
             <div class="form-navigation">
               <button type="button" class="prev-btn">Previous</button>
               <button type="button" class="next-btn">Next</button>
