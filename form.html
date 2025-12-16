@@ -219,14 +219,52 @@
 
             <div class="form-group">
               <label for="proofOfAddress">Proof of Address (from your home country) *</label>
-              <small>Please attach certificate of residence, utility bill or bank
-                statement, for example.</small>
-              <small><b>IMPORTANT</b> - Must have been issued within the last 3 (three) months and be in
-                accordance with the information provided on this form.</small>
-              <input type="file" id="proofOfAddress" name="proofOfAddress" accept=".pdf,.jpg,.jpeg,.png" required />
-              <small class="file-help">Accepted formats:<strong>PDF only</strong><br>
-              ❌ Photos (JPG / PNG) are not accepted<br>
-                (Max 5MB)</small>
+              <small style="color: black;">
+              Upload a scanned document (PDF only)<br><br>
+
+              Accepted documents:<br>
+               - A utility bill (e.g. electricity, water, gas, or telecommunications)<br>
+               - A bank statement (e.g. Revolut, Trade Republic, ING Bank, or other regulated banks)<br>
+               - An official residence certificate issued by a local authority<br><br>
+
+              Alternatively:<br>
+               - If your identification document includes your address, you may upload your ID instead of a separate proof of address.<br><br>
+
+             The document must:<br>
+               - Be issued within the last 3 months<br>
+               - Show your name and full address<br>
+               - Be written using the Roman alphabet<br><br>
+
+             ❌ The following are NOT accepted:<br>
+               - Rental contracts<br>
+               - Purchase receipts<br>
+               - Screenshots or photos<br><br>
+
+            <strong>Important:</strong><br>
+            The address provided will be registered with the Portuguese Tax Authority for your NIF.<br><br>
+
+          <strong>Registering a Portuguese address for your NIF:</strong><br>
+          If you want your NIF to be registered with a Portuguese address instead of your home country address, you must provide the following:<br><br>
+          - <strong>EU citizens:</strong> a CRUE (Certificate of Registration of an EU Citizen).<br>
+          - <strong>Non-EU citizens:</strong> one of the following documents issued by AIMA:<br>
+            • A valid residence permit<br>
+            • Proof of appointment with AIMA<br>
+            • Receipt or official document confirming that a residence permit application is pending
+       </small>
+
+        <input
+          type="file"
+          id="addressProof"
+          name="addressProof"
+          accept="application/pdf"
+          required
+         />
+
+     <small class="file-help">
+      Accepted format: PDF (Max. 5MB)<br>
+    </small>
+</div>
+    
             </div>
             <div class="form-navigation">
               <button type="button" class="prev-btn">Previous</button>
