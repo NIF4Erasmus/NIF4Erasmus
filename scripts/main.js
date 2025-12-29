@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Validate file sizes (max 5MB)
       const idCardInput = this.querySelector('input[name="idCard"]');
-      const proofOfAddressInput = this.querySelector('input[name="proofOfAddress"]');
+      const proofOfAddressInput = document.querySelector('input[name="proofOfAddress"]');
       const maxSize = 5 * 1024 * 1024; // 5MB in bytes
     
       if (idCardInput.files[0] && idCardInput.files[0].size > maxSize) {
@@ -306,7 +306,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const formData = new FormData(this);
+          
+        // Verificação extra para evitar erro de null
+          if (!formData.get("idCard")) {
+          alert("Please upload your ID Card document.");
+          submitBtn.textContent = "Proceed to Payment";
+          submitBtn.disabled = false;
+          return;
+        }
 
+         if (!formData.get("proofOfAddress")) {
+         alert("Please upload your Proof of Address document.");
+         submitBtn.textContent = "Proceed to Payment";
+         submitBtn.disabled = false;
+         return;
+        }
+        
         // Upload files first
         const idCard = formData.get("idCard");
         const proofOfAddress = formData.get("proofOfAddress");
