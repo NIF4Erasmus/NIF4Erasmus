@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.disabled = false;
         return;
       }
-      if (proofOfAddressInput.files[0] && proofOfAddressInput.files[0].size > maxSize) {
+      if (proofOfAddressInput && proofOfAddressInput.files[0] && proofOfAddressInput.files[0].size > maxSize) {
         alert("Proof of Address file is too large. Maximum allowed size is 5MB.");
         submitBtn.textContent = "Proceed to Payment";
         submitBtn.disabled = false;
