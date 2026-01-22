@@ -458,7 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentSection.querySelector("#acceptPrivacy");
           if (!termsCheckbox.checked || !privacyCheckbox.checked) {
             alert(
-              "Please accept the Terms and Conditions and the Privacy Policy before proceeding."
+              "Please accept the Terms and Conditions, the Privacy Policy, and the Identity Verification requirement before proceeding."
             );
             return;
           }
