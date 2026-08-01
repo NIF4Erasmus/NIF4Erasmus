@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     measurementId: "G-5GFPK7SM1T",
   };
   const STRIPE_PAYMENT_LINKS = {
-    nifOnly: "https://buy.stripe.com/28E8wO1Ub1I40SN2Ttbsc02",
-    nifAndTax: "https://buy.stripe.com/dRm00ibuL5Yk44ZgKjbsc01",
+    nifOnly: "https://buy.stripe.com/5kQbJ0fL186s6d7cu3bsc03",
+    nifAndTax: "https://buy.stripe.com/28E14m9mD5YkdFzbpZbsc04",
   };
 
   // Initialize Firebase
