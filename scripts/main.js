@@ -361,7 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
           serviceDetails: {
             type: formData.get("service"),
             price:
-              formData.get("service") === "nifOnly" ? "50,00 €" : "100,00 €",
+              formData.get("service") === "nifOnly" ? "64,00 €" : "105,00 €",
             description:
               formData.get("service") === "nifOnly"
                 ? "NIF (EU/EEA CITIZENS)"
